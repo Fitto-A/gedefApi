@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace gedefApi.Models
 {
-    public class TBA_LEGAJOS
+    public class TBA_LEGAJO
     {
         [Key]
         public int IDLEG { get; set; }
-        public int LEGAJO { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string LEGAJO { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
         public string CUIL { get; set; }
@@ -17,7 +19,7 @@ namespace gedefApi.Models
 
         public int CODPOS { get; set; }
 
-        [Column(TypeName = "nvarchar(1)")]
+        [Column(TypeName = "nchar(1)")]
         public string RELEVO { get; set; }
     }
 }

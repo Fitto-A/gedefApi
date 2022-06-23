@@ -8,13 +8,13 @@ namespace gedefApi.Models
         [Key]
         public int USUARIOID { get; set; }
 
-        [Column(TypeName = "nvachar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string USUARIO { get; set; }
 
-        [Column(TypeName = "nvachar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string CONTRASEÑA { get; set; }
 
-        [Column(TypeName = "nvachar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string CATEGORIA { get; set; }
     }
 }

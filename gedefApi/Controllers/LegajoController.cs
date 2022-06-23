@@ -22,7 +22,7 @@ namespace gedefApi.Controllers
 
         // GET: api/Legajo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TBA_LEGAJOS>>> GetLegajos()
+        public async Task<ActionResult<IEnumerable<Legajo>>> GetLegajos()
         {
             if (_context.Legajos == null)
             {
@@ -33,7 +33,7 @@ namespace gedefApi.Controllers
 
         // GET: api/Legajo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TBA_LEGAJOS>> GetLegajo(int id)
+        public async Task<ActionResult<Legajo>> GetLegajo(int id)
         {
             if (_context.Legajos == null)
             {
@@ -52,7 +52,7 @@ namespace gedefApi.Controllers
         // PUT: api/Legajo/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLegajo(int id, TBA_LEGAJOS legajo)
+        public async Task<IActionResult> PutLegajo(int id, Legajo legajo)
         {
             if (id != legajo.LegajoId)
             {
@@ -83,7 +83,7 @@ namespace gedefApi.Controllers
         // POST: api/Legajo
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TBA_LEGAJOS>> PostLegajo(TBA_LEGAJOS legajo)
+        public async Task<ActionResult<Legajo>> PostLegajo(Legajo legajo)
         {
             var temp = _context.Legajos
                 .Where(x => x.Name == legajo.Name && x.email == legajo.email)

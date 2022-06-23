@@ -8,15 +8,15 @@ namespace gedefApi.Models
         [Key]
         public int IDBAR { get; set; }
 
-        [Column(TypeName = "nvachar(3)")]
+        [Column(TypeName = "nchar(3)")]
         public string CODBAR { get; set; }
 
-        [Column(TypeName = "nvachar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string NOMBAR { get; set; }
 
         public int NUMMAR { get; set; }
 
-        [Column(TypeName = "nvachar(1)")]
+        [Column(TypeName = "nchar(1)")]
         public string ACTBAR { get; set; }
     }
 }

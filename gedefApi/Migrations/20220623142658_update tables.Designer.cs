@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using gedefApi.Models;
 
@@ -10,9 +11,10 @@ using gedefApi.Models;
 namespace gedefApi.Migrations
 {
     [DbContext(typeof(GedefDbContext))]
-    partial class GedefDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220623142658_update tables")]
+    partial class updatetables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,15 +97,15 @@ namespace gedefApi.Migrations
 
                     b.Property<string>("ACTBAR")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("CODBAR")
                         .IsRequired()
-                        .HasColumnType("nchar(3)");
+                        .HasColumnType("nvachar(3)");
 
                     b.Property<string>("NOMBAR")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvachar(50)");
 
                     b.Property<int>("NUMMAR")
                         .HasColumnType("int");
@@ -138,7 +140,7 @@ namespace gedefApi.Migrations
 
                     b.Property<string>("RELEVO")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvarchar(1)");
 
                     b.HasKey("IDLEG");
 
@@ -163,7 +165,7 @@ namespace gedefApi.Migrations
 
                     b.Property<string>("CODPLA")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(8)");
 
                     b.Property<string>("CODROLXBAR")
                         .IsRequired()
@@ -200,35 +202,35 @@ namespace gedefApi.Migrations
 
                     b.Property<string>("CAPITAN")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("COCINERO")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("CODBAR")
                         .IsRequired()
-                        .HasColumnType("nchar(3)");
+                        .HasColumnType("nvachar(3)");
 
                     b.Property<string>("CODROLXBAR")
                         .IsRequired()
-                        .HasColumnType("nchar(3)");
+                        .HasColumnType("nvachar(3)");
 
                     b.Property<string>("JEFEMAQUINA")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("MARINCUB1")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("MARINPLA1")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.Property<string>("PRIMEROF")
                         .IsRequired()
-                        .HasColumnType("nchar(1)");
+                        .HasColumnType("nvachar(1)");
 
                     b.HasKey("IDROLXBAR");
 
@@ -245,15 +247,15 @@ namespace gedefApi.Migrations
 
                     b.Property<string>("CATEGORIA")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvachar(50)");
 
                     b.Property<string>("CONTRASEÑA")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvachar(50)");
 
                     b.Property<string>("USUARIO")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvachar(50)");
 
                     b.HasKey("USUARIOID");
 

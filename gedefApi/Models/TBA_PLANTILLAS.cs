@@ -8,7 +8,7 @@ namespace gedefApi.Models
         [Key]
         public int IDPLA { get; set; }
 
-        [Column(TypeName = "nvarchar(8)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string CODPLA { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
