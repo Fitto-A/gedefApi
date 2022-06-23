@@ -8,7 +8,13 @@ namespace gedefApi.Models
         { }
 
         public DbSet<Question> Questions { get; set; }
-        public DbSet<Legajo> Legajos { get; set; }
+        public DbSet<TBA_LEGAJOS> TBA_LEGAJOS { get; set; }
+        public DbSet<TBA_USUARIOS> TBA_USUARIOS { get; set; }
+        public DbSet<TBA_BARCOS> TBA_BARCOS { get; set; }
+        public DbSet<TBA_ROLXBAR> TBA_ROLXBAR { get; set; }
+        public DbSet<TBA_PLANTILLAS> TBA_PLANTILLAS { get; set; }
+
+
     }
 
 }
