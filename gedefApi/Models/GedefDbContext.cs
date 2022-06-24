@@ -6,9 +6,8 @@ namespace gedefApi.Models
     {
         public GedefDbContext(DbContextOptions<GedefDbContext> options) : base(options)
         { }
-
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<Legajo> Legajos { get; set; }
+        
+        public DbSet<Legajos> TBA_LEGAJOS { get; set; }        
     }
 
 }

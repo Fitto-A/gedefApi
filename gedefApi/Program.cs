@@ -16,7 +16,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
 var app = builder.Build();
 
 app.UseCors(options =>
-options.WithOrigins("http://localhost:3000")
+options.WithOrigins("http://localhost:3001")
 .AllowAnyMethod()
 .AllowAnyHeader());
 

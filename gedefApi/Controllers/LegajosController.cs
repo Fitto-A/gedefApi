@@ -11,55 +11,55 @@ namespace gedefApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class QuestionsController : ControllerBase
+    public class LegajosController : ControllerBase
     {
         private readonly GedefDbContext _context;
 
-        public QuestionsController(GedefDbContext context)
+        public LegajosController(GedefDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Questions
+        // GET: api/Legajos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Question>>> GetQuestions()
+        public async Task<ActionResult<IEnumerable<Legajos>>> GetTBA_LEGAJOS()
         {
-          if (_context.Questions == null)
+          if (_context.TBA_LEGAJOS == null)
           {
               return NotFound();
           }
-            return await _context.Questions.ToListAsync();
+            return await _context.TBA_LEGAJOS.ToListAsync();
         }
 
-        // GET: api/Questions/5
+        // GET: api/Legajos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Question>> GetQuestion(int id)
+        public async Task<ActionResult<Legajos>> GetLegajos(int id)
         {
-          if (_context.Questions == null)
+          if (_context.TBA_LEGAJOS == null)
           {
               return NotFound();
           }
-            var question = await _context.Questions.FindAsync(id);
+            var legajos = await _context.TBA_LEGAJOS.FindAsync(id);
 
-            if (question == null)
+            if (legajos == null)
             {
                 return NotFound();
             }
 
-            return question;
+            return legajos;
         }
 
-        // PUT: api/Questions/5
+        // PUT: api/Legajos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutQuestion(int id, Question question)
+        public async Task<IActionResult> PutLegajos(int id, Legajos legajos)
         {
-            if (id != question.QnId)
+            if (id != legajos.Legajo)
             {
                 return BadRequest();
             }
 
-            _context.Entry(question).State = EntityState.Modified;
+            _context.Entry(legajos).State = EntityState.Modified;
 
             try
             {
@@ -67,7 +67,7 @@ namespace gedefApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!QuestionExists(id))
+                if (!LegajosExists(id))
                 {
                     return NotFound();
                 }
@@ -80,44 +80,44 @@ namespace gedefApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Questions
+        // POST: api/Legajos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Question>> PostQuestion(Question question)
+        public async Task<ActionResult<Legajos>> PostLegajos(Legajos legajos)
         {
-          if (_context.Questions == null)
+          if (_context.TBA_LEGAJOS == null)
           {
-              return Problem("Entity set 'GedefDbContext.Questions'  is null.");
+              return Problem("Entity set 'GedefDbContext.TBA_LEGAJOS'  is null.");
           }
-            _context.Questions.Add(question);
+            _context.TBA_LEGAJOS.Add(legajos);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetQuestion", new { id = question.QnId }, question);
+            return CreatedAtAction("GetLegajos", new { id = legajos.Legajo }, legajos);
         }
 
-        // DELETE: api/Questions/5
+        // DELETE: api/Legajos/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteQuestion(int id)
+        public async Task<IActionResult> DeleteLegajos(int id)
         {
-            if (_context.Questions == null)
+            if (_context.TBA_LEGAJOS == null)
             {
                 return NotFound();
             }
-            var question = await _context.Questions.FindAsync(id);
-            if (question == null)
+            var legajos = await _context.TBA_LEGAJOS.FindAsync(id);
+            if (legajos == null)
             {
                 return NotFound();
             }
 
-            _context.Questions.Remove(question);
+            _context.TBA_LEGAJOS.Remove(legajos);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool QuestionExists(int id)
+        private bool LegajosExists(int id)
         {
-            return (_context.Questions?.Any(e => e.QnId == id)).GetValueOrDefault();
+            return (_context.TBA_LEGAJOS?.Any(e => e.Legajo == id)).GetValueOrDefault();
         }
     }
 }
