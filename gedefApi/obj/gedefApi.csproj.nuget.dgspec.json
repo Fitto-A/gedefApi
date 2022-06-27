@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\facundo\\source\\repos\\gedefApi\\gedefApi\\gedefApi.csproj": {}
+    "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\facundo\\source\\repos\\gedefApi\\gedefApi\\gedefApi.csproj": {
+    "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\facundo\\source\\repos\\gedefApi\\gedefApi\\gedefApi.csproj",
+        "projectUniqueName": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj",
         "projectName": "gedefApi",
-        "projectPath": "C:\\Users\\facundo\\source\\repos\\gedefApi\\gedefApi\\gedefApi.csproj",
-        "packagesPath": "C:\\Users\\facundo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\facundo\\source\\repos\\gedefApi\\gedefApi\\obj\\",
+        "projectPath": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj",
+        "packagesPath": "C:\\Users\\agustin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\facundo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\agustin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
