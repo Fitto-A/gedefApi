@@ -11,55 +11,55 @@ namespace gedefApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class PlantillasController : ControllerBase
     {
         private readonly GedefDbContext _context;
 
-        public UsuariosController(GedefDbContext context)
+        public PlantillasController(GedefDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Usuarios
+        // GET: api/Plantillas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuarios>>> GetTBA_USUARIOS()
+        public async Task<ActionResult<IEnumerable<Plantillas>>> GetTBA_PLANTILLAS()
         {
-            if (_context.TBA_USUARIOS == null)
+            if (_context.TBA_PLANTILLAS == null)
             {
                 return NotFound();
             }
-            return await _context.TBA_USUARIOS.ToListAsync();
+            return await _context.TBA_PLANTILLAS.ToListAsync();
         }
 
-        //GET: api/Usuarios/5
+        // GET: api/Plantillas/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
+        public async Task<ActionResult<Plantillas>> GetPlantillas(int id)
         {
-            if (_context.TBA_USUARIOS == null)
+            if (_context.TBA_PLANTILLAS == null)
             {
                 return NotFound();
             }
-            var usuarios = await _context.TBA_USUARIOS.FindAsync(id);
+            var plantillas = await _context.TBA_PLANTILLAS.FindAsync(id);
 
-            if (usuarios == null)
+            if (plantillas == null)
             {
                 return NotFound();
             }
 
-            return usuarios;
+            return plantillas;
         }
 
-        // PUT: api/Usuarios/5
+        // PUT: api/Plantillas/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsuarios(int id, Usuarios usuarios)
+        public async Task<IActionResult> PutPlantillas(int id, Plantillas plantillas)
         {
-            if (id != usuarios.IDPERFIL)
+            if (id != plantillas.CODPLA)
             {
                 return BadRequest();
             }
 
-            _context.Entry(usuarios).State = EntityState.Modified;
+            _context.Entry(plantillas).State = EntityState.Modified;
 
             try
             {
@@ -67,7 +67,7 @@ namespace gedefApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UsuariosExists(id))
+                if (!PlantillasExists(id))
                 {
                     return NotFound();
                 }
@@ -80,44 +80,44 @@ namespace gedefApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Usuarios
+        // POST: api/Plantillas
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuarios>> PostUsuarios(Usuarios usuarios)
+        public async Task<ActionResult<Plantillas>> PostPlantillas(Plantillas plantillas)
         {
-            if (_context.TBA_USUARIOS == null)
+            if (_context.TBA_PLANTILLAS == null)
             {
-                return Problem("Entity set 'GedefDbContext.TBA_USUARIOS'  is null.");
+                return Problem("Entity set 'GedefDbContext.TBA_PLANTILLAS'  is null.");
             }
-            _context.TBA_USUARIOS.Add(usuarios);
+            _context.TBA_PLANTILLAS.Add(plantillas);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsuarios", new { id = usuarios.IDPERFIL }, usuarios);
+            return CreatedAtAction("GetPlantillas", new { id = plantillas.CODPLA }, plantillas);
         }
 
-        // DELETE: api/Usuarios/5
+        // DELETE: api/Plantillas/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUsuarios(int id)
+        public async Task<IActionResult> DeletePlantillas(int id)
         {
-            if (_context.TBA_USUARIOS == null)
+            if (_context.TBA_PLANTILLAS == null)
             {
                 return NotFound();
             }
-            var usuarios = await _context.TBA_USUARIOS.FindAsync(id);
-            if (usuarios == null)
+            var plantillas = await _context.TBA_PLANTILLAS.FindAsync(id);
+            if (plantillas == null)
             {
                 return NotFound();
             }
 
-            _context.TBA_USUARIOS.Remove(usuarios);
+            _context.TBA_PLANTILLAS.Remove(plantillas);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UsuariosExists(int id)
+        private bool PlantillasExists(int id)
         {
-            return (_context.TBA_USUARIOS?.Any(e => e.IDPERFIL == id)).GetValueOrDefault();
+            return (_context.TBA_PLANTILLAS?.Any(e => e.CODPLA == id)).GetValueOrDefault();
         }
     }
 }
