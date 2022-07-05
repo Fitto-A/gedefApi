@@ -12,6 +12,9 @@ namespace gedefApi.Models
         public DbSet<Plantillas> TBA_PLANTILLAS { get; set; }
         public DbSet<RolxBar> TBA_ROLXBAR { get; set; }
         public DbSet<Barcos> TBA_BARCOS { get; set; }
+        public DbSet<Mareas> TBA_MAREAS { get; set; }
+        public DbSet<RolxBarxMar> TBA_ROLXBARXMAR { get; set; }
+
 
     }
 
