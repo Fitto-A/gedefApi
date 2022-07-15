@@ -11,8 +11,6 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string NOMBAR { get; set; }
 
-        public int NUMMAR { get; set; }
-
         [Column(TypeName = "nchar(1)")]
         public int ACTBAR { get; set; }
 

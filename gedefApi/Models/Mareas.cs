@@ -8,7 +8,7 @@ namespace gedefApi.Models
     {
         [Key]
         public int CODMAR { get; set; }
-        public int CODROLXMAR { get; set; }
+        public int CODROLXBARXMAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
         public string FECHASAL { get; set; }
@@ -25,5 +25,8 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string VIAJE { get; set; }
         public int CODBAR { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string ARMADOR { get; set; }
     }
 }
