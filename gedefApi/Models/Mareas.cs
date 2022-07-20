@@ -28,5 +28,8 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string ARMADOR { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string NOMBAR { get; set; }
     }
 }

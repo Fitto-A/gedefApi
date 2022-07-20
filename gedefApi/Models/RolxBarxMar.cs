@@ -8,136 +8,71 @@ namespace gedefApi.Models
         [Key]
         public int CODROLXBARXMAR { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
-        public string CAPITAN { get; set; }
+        public int CAPITAN { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int PRIMEROF { get; set; }
 
-        public string PRIMEROF { get; set; }
+        public int JEFEMAQUINA { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int PRIMEROFMAQ { get; set; }
 
-        public string JEFEMAQUINA { get; set; }
+        public int SEGUNOFMAQ { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int CONTRAMCUB { get; set; }
 
-        public string PRIMEROFMAQ { get; set; }
+        public int CONTRAMPLA { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int COCINERO { get; set; }
 
-        public string SEGUNOFMAQ { get; set; }
+        public int ENGRASADOR { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int ENFERMERO { get; set; }
 
-        public string CONTRAMCUB { get; set; }
+        public int MARINCUBGUIN { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINCUB1 { get; set; }
 
-        public string CONTRAMPLA { get; set; }
+        public int MARINCUB2 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINCUB3 { get; set; }
 
-        public string COCINERO { get; set; }
+        public int MARINCUB4 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINCUB5 { get; set; }
 
-        public string ENGRASADOR { get; set; }
+        public int BODEG1 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int BODEG2 { get; set; }
 
-        public string ENFERMERO { get; set; }
+        public int TUNELERO { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINERO { get; set; }
 
-        public string MARINCUBGUIN { get; set; }
+        public int LAVADOR { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA1 { get; set; }
 
-        public string MARINCUB1 { get; set; }
+        public int MARINPLA2 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA3 { get; set; }
 
-        public string MARINCUB2 { get; set; }
+        public int MARINPLA4 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA5 { get; set; }
 
-        public string MARINCUB3 { get; set; }
+        public int MARINPLA6 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA7 { get; set; }
 
-        public string MARINCUB4 { get; set; }
+        public int MARINPLA8 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA9 { get; set; }
 
-        public string MARINCUB5 { get; set; }
+        public int MARINPLA10 { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        public int MARINPLA11 { get; set; }
 
-        public string BODEG1 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string BODEG2 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string TUNELERO { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINERO { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string LAVADOR { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA1 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA2 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA3 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA4 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA5 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA6 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA7 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA8 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA9 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA10 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA11 { get; set; }
-
-        [Column(TypeName = "nvarchar(50)")]
-
-        public string MARINPLA12 { get; set; }
+        public int MARINPLA12 { get; set; }
     }
 
 }

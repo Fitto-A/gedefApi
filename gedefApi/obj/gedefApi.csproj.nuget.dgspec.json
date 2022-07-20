@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj": {}
+    "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj": {
+    "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj",
+        "projectUniqueName": "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj",
         "projectName": "gedefApi",
-        "projectPath": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj",
+        "projectPath": "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj",
         "packagesPath": "C:\\Users\\agustin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\obj\\",
+        "outputPath": "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\agustin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "szQr0MJKtYNASx0m/kdu6KKbhdsY048oQEdLhWHQY6I+GtzYBR7bfVsb03SFvUZWIfhD80jwENsrKIbolRcQZA==",
+  "dgSpecHash": "1UjvWMnHsunNy5w0R1vEuoo37m+BEUAh/RPom1m9XdnQmgpnhoSf0UqOKuE3VU9OkuUfYh5FTpQAFh81ucvoEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\agustin\\Desktop\\App\\Back\\gedefApi\\gedefApi\\gedefApi.csproj",
+  "projectFilePath": "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agustin\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\castle.windsor\\5.1.2\\castle.windsor.5.1.2.nupkg.sha512",
