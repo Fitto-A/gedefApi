@@ -15,16 +15,22 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
 
 var app = builder.Build();
 
-app.UseCors(options =>
-//PRODUCCION
-//"http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672"
-//DESARROLLO
-//http://localhost:7672
+//options.WithOrigins("http://localhost:7672", "http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
+//.AllowAnyMethod()
+//.AllowAnyHeader());
 
-options.WithOrigins("http://localhost:7672", "http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
-.AllowAnyMethod()
-.AllowAnyHeader());
-
+if (app.Environment.IsDevelopment()){
+    app.UseCors(options =>
+        options.WithOrigins("http://localhost:7672")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+}else if (app.Environment.IsProduction())
+{ 
+    app.UseCors(options =>
+        options.WithOrigins("http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction()) 
