@@ -16,9 +16,14 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"))
 var app = builder.Build();
 
 app.UseCors(options =>
-options.WithOrigins("http://192.168.6.247:7672")
+//PRODUCCION
+//options.WithOrigins("http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
+
+//DESARROLLO
+options.WithOrigins("http://localhost:7672")
 .AllowAnyMethod()
 .AllowAnyHeader());
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction()) 
