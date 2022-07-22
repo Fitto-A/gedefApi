@@ -17,10 +17,11 @@ var app = builder.Build();
 
 app.UseCors(options =>
 //PRODUCCION
-//options.WithOrigins("http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
-
+//"http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672"
 //DESARROLLO
-options.WithOrigins("http://localhost:7672")
+//http://localhost:7672
+
+options.WithOrigins("http://localhost:7672", "http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
 .AllowAnyMethod()
 .AllowAnyHeader());
 

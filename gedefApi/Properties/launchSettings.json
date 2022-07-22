@@ -5,15 +5,13 @@
     "anonymousAuthentication": true,
     "iis": {
       //PRODUCCION
-      //"applicationUrl": "http://200.32.51.124:7672/API/",
-      //DESARROLLO
-      "applicationUrl": "http://localhost:7673",
+      "applicationUrl": "http://200.32.51.124:7672/API/",
       "sslPort": 0
 
     },
     "iisExpress": {
-      //"applicationUrl": "http://200.32.51.124:7672/API/",
-      "applicationUrl": "http://localhost:7673",
+      //PRODUCCION
+      "applicationUrl": "http://200.32.51.124:7672/API/",
       "sslPort": 0
     }
   },
@@ -25,7 +23,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      //"applicationUrl": "http://200.32.51.124:7672/API/",
       "applicationUrl": "http://localhost:7673",
       "dotnetRunMessages": true
     },
