@@ -806,8 +806,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\gede
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\gedefApi.runtimeconfig.json
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\gedefApi.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\gedefApi.pdb
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Core.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Windsor.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Humanizer.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\MessagePack.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\MessagePack.Annotations.dll
@@ -830,7 +828,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Micr
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -838,7 +835,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Micr
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -1066,3 +1062,7 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\refi
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\gedefApi.pdb
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\gedefApi.genruntimeconfig.cache
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\ref\gedefApi.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Windsor.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll

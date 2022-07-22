@@ -25,10 +25,10 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nchar(20)")]
         public string Provincia { get; set; }
-                
+
         public int CodPos { get; set; }
 
-       [Column(TypeName = "nchar(20)")]
+        [Column(TypeName = "nchar(20)")]
         public string Categoria { get; set; }
 
         [Column(TypeName = "nchar(10)")]
