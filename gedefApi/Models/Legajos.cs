@@ -46,6 +46,9 @@ namespace gedefApi.Models
         public string? Certvin { get; set; }
 
         public double? Modalidad { get; set; }
+
+        [Column(TypeName = "nchar(10)")]
+        public string? Egreso { get; set; }
     }
 }
 

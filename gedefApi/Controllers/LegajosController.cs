@@ -30,7 +30,6 @@ namespace gedefApi.Controllers
                 return NotFound();
             }
             return await _context.TBA_LEGAJOS.ToListAsync();
-            //return await _context.TBA_LEGAJOS.ToListAsync();
 
         }
 

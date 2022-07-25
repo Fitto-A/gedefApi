@@ -13,7 +13,7 @@ namespace gedefApi.Models
         public DbSet<Barcos> TBA_BARCOS { get; set; }
         public DbSet<Mareas> TBA_MAREAS { get; set; }
         public DbSet<RolxBarxMar> TBA_ROLXBARXMAR { get; set; }
-        public DbSet<LegajosTest> TBA_LEGAJOSTEST { get; set; }
+        public DbSet<Numeradores> TBA_NUMERADORES { get; set; }
 
     }
 
