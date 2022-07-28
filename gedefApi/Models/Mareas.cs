@@ -11,25 +11,28 @@ namespace gedefApi.Models
         public int CODROLXBARXMAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string FECHASAL { get; set; }
+        public string? FECHASAL { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string FECHAENT { get; set; }
+        public string? FECHAENT { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string PUERTOSAL { get; set; }
+        public string? PUERTOSAL { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string PUERTOENT { get; set; }
+        public string? PUERTOENT { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string VIAJE { get; set; }
+        public string? VIAJE { get; set; }
         public int CODBAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string ARMADOR { get; set; }
+        public string? ARMADOR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string NOMBAR { get; set; }
+        public string? NOMBAR { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? FECHACREACION { get; set; }
     }
 }
