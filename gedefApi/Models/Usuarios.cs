@@ -13,5 +13,8 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string CONTRASEÑA { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? CATEGORIA { get; set; }
     }
 }

@@ -34,5 +34,12 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string? FECHACREACION { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? ESTADO { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? FECHAACTIVACION { get; set; }
+
     }
 }
