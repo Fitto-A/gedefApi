@@ -10,7 +10,8 @@ namespace gedefApi.Models
 
         public int MARCOUNT { get; set; }
 
-        public int ROLXBARXMARCOUNT { get; set; }
+        [Column(TypeName = "nchar(10)")]
+        public int NOMBRE { get; set; }
 
     }
 }

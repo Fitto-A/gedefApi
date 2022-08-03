@@ -54,7 +54,7 @@ namespace gedefApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMareas(int id, Mareas mareas)
         {
-            if (id != mareas.CODMAR)
+            if (id != mareas.IDMAR)
             {
                 return BadRequest();
             }
@@ -92,7 +92,7 @@ namespace gedefApi.Controllers
             _context.TBA_MAREAS.Add(mareas);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMareas", new { id = mareas.CODMAR }, mareas);
+            return CreatedAtAction("GetMareas", new { id = mareas.IDMAR }, mareas);
         }
 
         // DELETE: api/Mareas/5
@@ -117,7 +117,7 @@ namespace gedefApi.Controllers
 
         private bool MareasExists(int id)
         {
-            return (_context.TBA_MAREAS?.Any(e => e.CODMAR == id)).GetValueOrDefault();
+            return (_context.TBA_MAREAS?.Any(e => e.IDMAR == id)).GetValueOrDefault();
         }
     }
 }

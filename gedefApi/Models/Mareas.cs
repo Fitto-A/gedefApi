@@ -7,7 +7,7 @@ namespace gedefApi.Models
     public class Mareas
     {
         [Key]
-        public int CODMAR { get; set; }
+        public int IDMAR { get; set; }
         public int CODROLXBARXMAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
@@ -41,5 +41,8 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string? FECHAACTIVACION { get; set; }
 
+        [Column(TypeName = "nchar(4)")]
+        public string? ANO { get; set; }
+        public int? NUMMAREA { get; set; }
     }
 }
