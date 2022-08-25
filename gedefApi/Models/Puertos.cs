@@ -6,13 +6,16 @@ namespace gedefApi.Models
     public class Puertos
     {
         [Key]
-        public int CODPUE { get; set; }
+        public int IDPUE { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string NOMPUE { get; set; }
+        public string? NOMPUE { get; set; }
 
         [Column(TypeName = "nchar(1)")]
         public string? ACTPUE { get; set; }
+
+        [Column(TypeName = "nchar(4)")]
+        public string? NOMABREV { get; set; }
 
     }
 }

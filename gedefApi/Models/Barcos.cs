@@ -16,6 +16,8 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nchar(10)")]
         public string? NOMABREV { get; set; }
+        public int? ARMADOR1 { get; set; }
+        public int? ARMADOR2 { get; set; }
 
     }
 }

@@ -54,7 +54,7 @@ namespace gedefApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPuertos(int id, Puertos puertos)
         {
-            if (id != puertos.CODPUE)
+            if (id != puertos.IDPUE)
             {
                 return BadRequest();
             }
@@ -92,7 +92,7 @@ namespace gedefApi.Controllers
             _context.TBA_PUERTOS.Add(puertos);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPuertos", new { id = puertos.CODPUE }, puertos);
+            return CreatedAtAction("GetPuertos", new { id = puertos.IDPUE }, puertos);
         }
 
         // DELETE: api/Puertos/5
@@ -117,7 +117,7 @@ namespace gedefApi.Controllers
 
         private bool PuertosExists(int id)
         {
-            return (_context.TBA_PUERTOS?.Any(e => e.CODPUE == id)).GetValueOrDefault();
+            return (_context.TBA_PUERTOS?.Any(e => e.IDPUE == id)).GetValueOrDefault();
         }
     }
 }

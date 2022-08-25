@@ -8,10 +8,10 @@ namespace gedefApi.Models
         [Key]
         public int IDNUM { get; set; }
 
-        public int MARCOUNT { get; set; }
+        public int COUNTER { get; set; }
 
-        [Column(TypeName = "nchar(10)")]
-        public int NOMBRE { get; set; }
+        [Column(TypeName = "nvarchar(10)")]
+        public string? NOMBRE { get; set; }
 
     }
 }

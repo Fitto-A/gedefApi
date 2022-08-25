@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using gedefApi.Models.PartesPesca;
+using gedefApi.Models.PlanillaRoles;
+using Microsoft.EntityFrameworkCore;
 
 namespace gedefApi.Models
 {
@@ -15,6 +17,10 @@ namespace gedefApi.Models
         public DbSet<Numeradores> TBA_NUMERADORES { get; set; }
         public DbSet<DiasxMar> TBA_DIASXMAR { get; set; }
         public DbSet<Puertos> TBA_PUERTOS { get; set; }
+        public DbSet<PartePesca> TBA_PARTEPESCA { get; set; }
+        public DbSet<ParteSinPesca> TBA_PARTESINPESCA { get; set; }
+        public DbSet<ParteFinal> TBA_PARTEFINAL { get; set; }
+        public DbSet<Especies> TBA_ESPECIES { get; set; }
 
     }
 

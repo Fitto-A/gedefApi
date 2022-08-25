@@ -19,9 +19,10 @@ namespace gedefApi.Controllers
         {
             _context = context;
         }
+    
 
-        // GET: api/Usuarios
-        [HttpGet]
+        //GET: api/Usuarios
+       [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuarios>>> GetTBA_USUARIOS()
         {
             if (_context.TBA_USUARIOS == null)
@@ -31,22 +32,42 @@ namespace gedefApi.Controllers
             return await _context.TBA_USUARIOS.ToListAsync();
         }
 
-        //GET: api/Usuarios/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
+        ////GET: api/Usuarios/5
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
+        //{
+        //    if (_context.TBA_USUARIOS == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var usuarios = await _context.TBA_USUARIOS.FindAsync(id);
+
+        //    if (usuarios == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return usuarios;
+        //}
+
+        [HttpGet("{usuario}")]
+        public async Task<ActionResult<Usuarios>> GetByUsuario(String user)
         {
             if (_context.TBA_USUARIOS == null)
             {
                 return NotFound();
             }
-            var usuarios = await _context.TBA_USUARIOS.FindAsync(id);
-
-            if (usuarios == null)
+            var usuarios = await _context.TBA_USUARIOS.ToListAsync();
+            var item = usuarios.SingleOrDefault(i => i.USUARIO == user);
+            
+            if (item == null)
             {
                 return NotFound();
             }
-
-            return usuarios;
+            else
+            {
+                return item;
+            }
         }
 
         // PUT: api/Usuarios/5

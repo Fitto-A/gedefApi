@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
+using gedefApi.Models.PlanillaRoles;
 
 namespace gedefApi.Controllers
 {
