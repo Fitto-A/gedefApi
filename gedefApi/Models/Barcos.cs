@@ -18,6 +18,17 @@ namespace gedefApi.Models
         public string? NOMABREV { get; set; }
         public int? ARMADOR1 { get; set; }
         public int? ARMADOR2 { get; set; }
+        public int? TRIPULACION { get; set; }
+        public int? TRIPULACIONMAX { get; set; }
+        public int? CAPACIDAD { get; set; }
+
+        [Column(TypeName = "nchar(10)")]
+        public string? EMPRESA { get; set; }
+
+        [Column(TypeName = "nchar(10)")]
+        public string? UNIDAD { get; set; }
+        public int? ARMADOR3 { get; set; }
+        public int? ARMADOR4 { get; set; }
 
     }
 }

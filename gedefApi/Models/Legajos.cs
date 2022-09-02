@@ -47,8 +47,11 @@ namespace gedefApi.Models
 
         public double? Modalidad { get; set; }
 
-        [Column(TypeName = "nchar(10)")]
-        public string? Egreso { get; set; }
+        //[Column(TypeName = "nchar(10)")]
+        //public string? Egreso { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? Estado { get; set; }
     }
 }
 

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,22 +24,21 @@ namespace gedefApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Legajos>>> GetTBA_LEGAJOS()
         {
-            if (_context.TBA_LEGAJOS == null)
-            {
-                return NotFound();
-            }
+          if (_context.TBA_LEGAJOS == null)
+          {
+              return NotFound();
+          }
             return await _context.TBA_LEGAJOS.ToListAsync();
-
         }
 
         // GET: api/Legajos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Legajos>> GetLegajos(int id)
         {
-            if (_context.TBA_LEGAJOS == null)
-            {
-                return NotFound();
-            }
+          if (_context.TBA_LEGAJOS == null)
+          {
+              return NotFound();
+          }
             var legajos = await _context.TBA_LEGAJOS.FindAsync(id);
 
             if (legajos == null)
@@ -56,7 +54,7 @@ namespace gedefApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLegajos(int id, Legajos legajos)
         {
-            if (id != legajos.Legajo)
+            if (id != legajos.Id)
             {
                 return BadRequest();
             }
@@ -87,14 +85,14 @@ namespace gedefApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Legajos>> PostLegajos(Legajos legajos)
         {
-            if (_context.TBA_LEGAJOS == null)
-            {
-                return Problem("Entity set 'GedefDbContext.TBA_LEGAJOS'  is null.");
-            }
+          if (_context.TBA_LEGAJOS == null)
+          {
+              return Problem("Entity set 'GedefDbContext.TBA_LEGAJOS'  is null.");
+          }
             _context.TBA_LEGAJOS.Add(legajos);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetLegajos", new { id = legajos.Legajo }, legajos);
+            return CreatedAtAction("GetLegajos", new { id = legajos.Id }, legajos);
         }
 
         // DELETE: api/Legajos/5
@@ -119,8 +117,7 @@ namespace gedefApi.Controllers
 
         private bool LegajosExists(int id)
         {
-            return (_context.TBA_LEGAJOS?.Any(e => e.Legajo == id)).GetValueOrDefault();
+            return (_context.TBA_LEGAJOS?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
-
