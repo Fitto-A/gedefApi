@@ -30,5 +30,10 @@ namespace gedefApi.Models
         public int? ARMADOR3 { get; set; }
         public int? ARMADOR4 { get; set; }
 
+        [Column(TypeName = "nvarchar(50)")]
+        public string? USUARIOBARCO { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? USUARIOBARCO2 { get; set; }
     }
 }
