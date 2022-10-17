@@ -11,7 +11,8 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\Pu
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Build.Locator.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Build.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Build.Framework.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.CodeAnalysis.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.dll
@@ -42,6 +43,7 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\Pu
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.NET.StringTools.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Debugger.Contracts.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll

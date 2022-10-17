@@ -44,5 +44,8 @@ namespace gedefApi.Models
         [Column(TypeName = "nchar(4)")]
         public string? ANO { get; set; }
         public int? NUMMAREA { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? FECHAFINALIZACION { get; set; }
     }
 }

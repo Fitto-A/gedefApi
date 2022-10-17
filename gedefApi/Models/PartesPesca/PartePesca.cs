@@ -32,6 +32,8 @@ namespace gedefApi.Models.PartesPesca
         public double? KPROD { get; set; }
         public double? KCAPTURA { get; set; }
         public double? MASTERS { get; set; }
+        public int? CODBAR { get; set; }
+        public int? HORASTOTAL { get; set; }
 
     }
 }

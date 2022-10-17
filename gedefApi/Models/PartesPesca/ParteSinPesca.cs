@@ -18,5 +18,7 @@ namespace gedefApi.Models.PartesPesca
 
         [Column(TypeName = "nvarchar(256)")]
         public string? OBSERVACIONES { get; set; }
+        public int? CODBAR { get; set; }
+
     }
 }

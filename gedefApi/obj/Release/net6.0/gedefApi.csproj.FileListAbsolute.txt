@@ -12,7 +12,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Me
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\MessagePack.Annotations.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Build.Locator.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -263,3 +262,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\re
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\gedefApi.pdb
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\gedefApi.genruntimeconfig.cache
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\ref\gedefApi.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Build.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Build.Framework.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.NET.StringTools.dll
