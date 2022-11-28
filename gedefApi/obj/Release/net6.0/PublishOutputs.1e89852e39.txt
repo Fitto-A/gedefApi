@@ -36,6 +36,7 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\Pu
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll

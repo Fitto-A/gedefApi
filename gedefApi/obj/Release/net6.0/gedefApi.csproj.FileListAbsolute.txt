@@ -265,3 +265,4 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net6.0\re
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Build.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Build.Framework.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.NET.StringTools.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll

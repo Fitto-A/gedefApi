@@ -7,72 +7,40 @@ namespace gedefApi.Models.PlanillaRoles
     {
         [Key]
         public int CODROLXBARXMAR { get; set; }
-
-        public int? CAPITAN { get; set; }
-
-        public int? PRIMEROF { get; set; }
-
-        public int? JEFEMAQUINA { get; set; }
-
-        public int? PRIMEROFMAQ { get; set; }
-
-        public int? SEGUNOFMAQ { get; set; }
-
-        public int? CONTRAMCUB { get; set; }
-
-        public int? CONTRAMPLA { get; set; }
-
+        public int? PATRON { get; set; }
+        public int? SEGUNPATRON { get; set; }
+        public int? JEFEMAQUINAS { get; set; }
+        public int? SEGUNJEFEMAQUINAS { get; set; }
         public int? COCINERO { get; set; }
+        public int? MARINERO1 { get; set; }
+        public int? MARINERO2 { get; set; }
+        public int? MARINERO3 { get; set; }
+        public int? MARINERO4 { get; set; }
+        public int? MARINERO5 { get; set; }
+        public int? MARINERO6 { get; set; }
+        public int? MARINERO7 { get; set; }
+        public int? MARINERO8 { get; set; }
+        public int? MARINERO9 { get; set; }
+        public int? MARINERO10 { get; set; }
+        public int? MARINERO11 { get; set; }
+        public int? MARINERO12 { get; set; }
+        public int? MARINERO13 { get; set; }
+        public int? MARINERO14 { get; set; }
+        public int? MARINERO15 { get; set; }
+        public int? MARINERO16 { get; set; }
+        public int? MARINERO17 { get; set; }
+        public int? MARINERO18 { get; set; }
+        public int? MARINERO19 { get; set; }
+        public int? MARINERO20 { get; set; }
+        public int? MARINERO21 { get; set; }
+        public int? MARINERO22 { get; set; }
+        public int? MARINERO23 { get; set; }
+        public int? MARINERO24 { get; set; }
+        public int? MARINERO25 { get; set; }
+        public int? MARINERO26 { get; set; }
+        public int? MARINERO27 { get; set; }
+        public int? MARINERO28 { get; set; }
 
-        public int? ENGRASADOR { get; set; }
-
-        public int? ENFERMERO { get; set; }
-
-        public int? MARINCUBGUIN { get; set; }
-
-        public int? MARINCUB1 { get; set; }
-
-        public int? MARINCUB2 { get; set; }
-
-        public int? MARINCUB3 { get; set; }
-
-        public int? MARINCUB4 { get; set; }
-
-        public int? MARINCUB5 { get; set; }
-
-        public int? BODEG1 { get; set; }
-
-        public int? BODEG2 { get; set; }
-
-        public int? TUNELERO { get; set; }
-
-        public int? MARINERO { get; set; }
-
-        public int? LAVADOR { get; set; }
-
-        public int? MARINPLA1 { get; set; }
-
-        public int? MARINPLA2 { get; set; }
-
-        public int? MARINPLA3 { get; set; }
-
-        public int? MARINPLA4 { get; set; }
-
-        public int? MARINPLA5 { get; set; }
-
-        public int? MARINPLA6 { get; set; }
-
-        public int? MARINPLA7 { get; set; }
-
-        public int? MARINPLA8 { get; set; }
-
-        public int? MARINPLA9 { get; set; }
-
-        public int? MARINPLA10 { get; set; }
-
-        public int? MARINPLA11 { get; set; }
-
-        public int? MARINPLA12 { get; set; }
     }
 
 }

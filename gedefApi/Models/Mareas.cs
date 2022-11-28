@@ -47,5 +47,6 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string? FECHAFINALIZACION { get; set; }
+        public int? TRIPULANTESCANT { get; set; }
     }
 }

@@ -37,5 +37,6 @@ namespace gedefApi.Models
         public string? USUARIOBARCO2 { get; set; }
         [Column(TypeName = "nchar(1)")]
         public string? TIPO { get; set; }
+        public int? TRIPULACIONMIN { get; set; }
     }
 }

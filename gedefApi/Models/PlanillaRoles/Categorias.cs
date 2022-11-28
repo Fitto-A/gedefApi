@@ -6,6 +6,7 @@ namespace gedefApi.Models.PlanillaRoles
 {
     public class Categorias
     {
+        [Key]
         public double CODIGO { get; set; }
 
         [Column(TypeName = "nvarchar(255)")]

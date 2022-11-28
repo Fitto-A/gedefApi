@@ -50,9 +50,31 @@ namespace gedefApi.Controllers
             return partePesca;
         }
 
-        // PUT: api/PartePescas/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        //[HttpGet("{idmar}")]
+        //public async Task<ActionResult<PartePesca>> GetByIdMar(int idmar)
+        //{
+        //    if(_context.TBA_PARTEPESCA == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var partes = await _context.TBA_PARTEPESCA.ToListAsync();
+        //    var item = partes.SelectMany(i => i.IDMAR == idmar);
+
+        //    if(item == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    else
+        //    {
+        //        return item;
+        //    }
+        //}
+
+
+
+    // PUT: api/PartePescas/5
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPut("{id}")]
         public async Task<IActionResult> PutPartePesca(int id, PartePesca partePesca)
         {
             if (id != partePesca.IDPP)

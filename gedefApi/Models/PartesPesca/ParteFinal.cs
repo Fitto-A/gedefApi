@@ -33,5 +33,6 @@ namespace gedefApi.Models.PartesPesca
         public double? CMKCAPTURA { get; set; }
         public double? MRZ { get; set; }
         public int? CODBAR { get; set; }
+        public int? DIASEFECTIVOS { get; set; }
     }
 }

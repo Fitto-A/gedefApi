@@ -21,12 +21,14 @@ namespace gedefApi.Models
         public DbSet<RolxBarxMar> TBA_ROLXBARXMAR { get; set; }
         public DbSet<DiasxMar> TBA_DIASXMAR { get; set; }
         //public DbSet<Categorias> TBA_CATEGORIAS { get; set; }
+        public DbSet<Roles> TBA_ROLES { get; set; }
 
         //PARTESPESCA
         public DbSet<PartePesca> TBA_PARTEPESCA { get; set; }
         public DbSet<ParteSinPesca> TBA_PARTESINPESCA { get; set; }
         public DbSet<ParteFinal> TBA_PARTEFINAL { get; set; }
         public DbSet<Especies> TBA_ESPECIES { get; set; }
+        public DbSet<Motivos> TBA_MOTIVOS { get; set; }
 
     }
 

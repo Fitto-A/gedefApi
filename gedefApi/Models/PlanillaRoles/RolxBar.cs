@@ -9,104 +9,82 @@ namespace gedefApi.Models.PlanillaRoles
         public int CODROLXBAR { get; set; }
 
         public int CODBAR { get; set; }
-        [Column(TypeName = "nchar(1)")]
-        public string? CAPITAN { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? PRIMEROF { get; set; }
+        public string? PATRON { get; set; }
+        
+        [Column(TypeName = "nchar(1)")]
+        public string? SEGUNPATRON { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? JEFEMAQUINA { get; set; }
+        public string? JEFEMAQUINAS { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? PRIMEROFMAQ { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? SEGUNOFMAQ { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? CONTRAMCUB { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? CONTRAMPLA { get; set; }
+        public string? SEGUNJEFEMAQUINAS { get; set; }
 
         [Column(TypeName = "nchar(1)")]
         public string? COCINERO { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? ENGRASADOR { get; set; }
+        public string? MARINERO1 { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? ENFERMERO { get; set; }
+        public string? MARINERO2 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO3 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO4 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO5 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO6 { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUBGUIN { get; set; }
+        public string? MARINERO7 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO8 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO9 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO10 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO11 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO12 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO13 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO14 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO15 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO16 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO17 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO18 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO19 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO20 { get; set; }
+        [Column(TypeName = "nchar(1)")]
+        public string? MARINERO21 { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUB1 { get; set; }
+        public string? MARINERO22 { get; set; }
 
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUB2 { get; set; }
-
+        public string? MARINERO23 { get; set; }
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUB3 { get; set; }
-
+        public string? MARINERO24 { get; set; }
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUB4 { get; set; }
-
+        public string? MARINERO25 { get; set; }
         [Column(TypeName = "nchar(1)")]
-        public string? MARINCUB5 { get; set; }
-
+        public string? MARINERO26 { get; set; }
         [Column(TypeName = "nchar(1)")]
-        public string? BODEG1 { get; set; }
-
+        public string? MARINERO27 { get; set; }
         [Column(TypeName = "nchar(1)")]
-        public string? BODEG2 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? TUNELERO { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINERO { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? LAVADOR { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA1 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA2 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA3 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA4 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA5 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA6 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA7 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA8 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA9 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA10 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA11 { get; set; }
-
-        [Column(TypeName = "nchar(1)")]
-        public string? MARINPLA12 { get; set; }
+        public string? MARINERO28 { get; set; }
 
     }
 }
