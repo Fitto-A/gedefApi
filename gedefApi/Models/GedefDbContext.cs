@@ -15,6 +15,7 @@ namespace gedefApi.Models
         public DbSet<Mareas> TBA_MAREAS { get; set; }
         public DbSet<Numeradores> TBA_NUMERADORES { get; set; }
         public DbSet<Puertos> TBA_PUERTOS { get; set; }
+        public DbSet<EmailSend> TBA_EMAILSEND { get; set; }
         
         //PLANILLAROLES
         public DbSet<RolxBar> TBA_ROLXBAR { get; set; }
@@ -29,7 +30,6 @@ namespace gedefApi.Models
         public DbSet<ParteFinal> TBA_PARTEFINAL { get; set; }
         public DbSet<Especies> TBA_ESPECIES { get; set; }
         public DbSet<Motivos> TBA_MOTIVOS { get; set; }
-
     }
 
 }

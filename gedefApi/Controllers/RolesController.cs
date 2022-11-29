@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
 using gedefApi.Models.PlanillaRoles;
+using EmailService;
 
 namespace gedefApi.Controllers
 {
@@ -19,6 +20,7 @@ namespace gedefApi.Controllers
         public RolesController(GedefDbContext context)
         {
             _context = context;
+            
         }
 
         // GET: api/Roles
