@@ -18,7 +18,7 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(256)")]
         public string? TITLE { get; set; }
 
-        [Column(TypeName = "nvarchar(256)")]
+        [Column(TypeName = "nvarchar(2000)")]
         public string? EMAILCONTENT { get; set; }
 
     }

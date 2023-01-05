@@ -30,6 +30,8 @@ namespace gedefApi.Models
         public DbSet<ParteFinal> TBA_PARTEFINAL { get; set; }
         public DbSet<Especies> TBA_ESPECIES { get; set; }
         public DbSet<Motivos> TBA_MOTIVOS { get; set; }
+        public DbSet<PFPCongeladores> TBA_PFPCongeladores { get; set; }
+        public DbSet<PFPFresqueros> TBA_PFPFresqueros { get; set; } 
     }
 
 }

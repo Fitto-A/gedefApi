@@ -13,8 +13,6 @@ namespace gedefApi.Models.PartesPesca
         public double? TOTCOLA { get; set; }
         public double? ENTYCOLA { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
-        public string? ESPECIES { get; set; }
         public double? KPROD { get; set; }
         public double? KCAPTURA { get; set; }
 
@@ -29,10 +27,14 @@ namespace gedefApi.Models.PartesPesca
         public double? C1KCAPTURA { get; set; }
         public double? C2 { get; set; }
         public double? C2KCAPTURA { get; set; }
-        public double? CM { get; set; }
-        public double? CMKCAPTURA { get; set; }
-        public double? MRZ { get; set; }
+        public double? CR { get; set; }
+        public double? CRKCAPTURA { get; set; }
         public int? CODBAR { get; set; }
         public int? DIASEFECTIVOS { get; set; }
+        
+        [Column(TypeName = "nvarchar(256)")]
+        public string? ESPECIES { get; set; }
+        public double? MRZ { get; set; }
+
     }
 }

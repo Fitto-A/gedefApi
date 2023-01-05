@@ -16,5 +16,8 @@ namespace gedefApi.Models.PartesPesca
         public string? CALIBRE { get; set; }
         public double? CONVERSION { get; set; }
 
+        [Column(TypeName = "nchar(1)")]
+        public string? HABILITADO { get; set; }
+
     }
 }

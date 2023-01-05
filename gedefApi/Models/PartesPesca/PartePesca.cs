@@ -33,7 +33,10 @@ namespace gedefApi.Models.PartesPesca
         public double? KCAPTURA { get; set; }
         public double? MASTERS { get; set; }
         public int? CODBAR { get; set; }
-        public int? HORASTOTAL { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? TOTALHORAS { get; set; }
+        public double? KILOSXCAJON { get; set; }
 
     }
 }
