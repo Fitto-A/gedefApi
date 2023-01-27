@@ -9,7 +9,7 @@ namespace gedefApi.Models
         [Key]
         public int ID { get; set; }
 
-        [Column(TypeName = "nvarchar(256)")]
+        [Column(TypeName = "nvarchar(2000)")]
         public string? DESTINATION { get; set; }
 
         [Column(TypeName = "nvarchar(256)")]

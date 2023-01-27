@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
 using EmailService;
+using Microsoft.Extensions.Hosting.Internal;
 
 namespace gedefApi.Controllers
 {
@@ -26,8 +27,12 @@ namespace gedefApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmailSend>>> GetTBA_EMAILSEND()
         {
-            //var message = new Message(new string[] { "afittipaldi@grupoveraz.com.ar" }, "Test desde la API", "This is the content from our email.");
-            //await _emailSender.SendEmailAsync(message);
+            //COMENTADO PARA ENVIAR MAILS SIN ADJUNTOS
+            //var message = new Message(new string[] { "afittipaldi@grupoveraz.com.ar" }, "Test desde la API", "This is the content from our email.", null);
+
+            var message = new Message(new string[] { "afittipaldi@grupoveraz.com.ar" }, "Test desde la API", "This is the content from our email.");
+            await _emailSender.SendEmailAsync(message);
+
             return await _context.TBA_EMAILSEND.ToListAsync();
         }
 
@@ -84,10 +89,15 @@ namespace gedefApi.Controllers
             _context.TBA_EMAILSEND.Add(emailSend);
             await _context.SaveChangesAsync();
 
+            var destinationDynamic = emailSend.DESTINATION != null ? emailSend.DESTINATION : "afittipaldi@grupoveraz.com.ar";
             var titleDynamic = emailSend.TITLE != null ? emailSend.TITLE : "Título";
-            var contentDynamic = emailSend.EMAILCONTENT != null ? emailSend.EMAILCONTENT : "Mail de prueba";
+            var contentDynamic = emailSend.EMAILCONTENT != null ? emailSend.EMAILCONTENT : " ";
 
-            var message = new Message(new string[] { "afittipaldi@grupoveraz.com.ar" }, titleDynamic!, contentDynamic!);
+            //COMENTADO PARA ENVIAR MAILS SIN ADJUNTOS
+            //var files = Request.Form.Files.Any() ? Request.Form.Files : new FormFileCollection();
+            //var message = new Message(new string[] { destinationDynamic! }, titleDynamic!, contentDynamic!, files);
+
+            var message = new Message(new string[] { destinationDynamic! }, titleDynamic!, contentDynamic!);
             await _emailSender.SendEmailAsync(message);
 
             return CreatedAtAction("GetEmailSend", new { id = emailSend.ID }, emailSend);

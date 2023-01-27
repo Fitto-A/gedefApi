@@ -31,11 +31,27 @@ namespace EmailService
         private MimeMessage CreateEmailMessage(Message message)
         {
             var emailMessage = new MimeMessage();
-            emailMessage.From.Add(new MailboxAddress("email", _emailConfig.From));
+            emailMessage.From.Add(new MailboxAddress("GEDEF", _emailConfig.From));
             emailMessage.To.AddRange(message.To);
             emailMessage.Subject = message.Subject;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Text) { Text = message.Content };
 
+            var bodyBuilder = new BodyBuilder { HtmlBody = string.Format("<h2 style='color:#005786;'>{0}</h2><br/>", message.Content) };
+
+            //COMENTADO PARA ENVIAR MAILS SIN ADJUNTOS
+            //if (message.Attachments != null && message.Attachments.Any())
+            //{
+            //    byte[] fileBytes;
+            //    foreach (var attachment in message.Attachments)
+            //    {
+            //        using (var ms = new MemoryStream())
+            //        {
+            //            attachment.CopyTo(ms);
+            //            fileBytes = ms.ToArray();
+            //        }
+            //        bodyBuilder.Attachments.Add(attachment.FileName, fileBytes, ContentType.Parse(attachment.ContentType));
+            //    }
+            //}
+            emailMessage.Body = bodyBuilder.ToMessageBody();
             return emailMessage;
         }
 

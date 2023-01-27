@@ -23,7 +23,7 @@ namespace gedefApi.Models
         public string? PUERTOENT { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string? VIAJE { get; set; }
+        public string? TRIPULANTEEXTRA { get; set; }
         public int CODBAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
@@ -48,5 +48,11 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string? FECHAFINALIZACION { get; set; }
         public int? TRIPULANTESCANT { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? HORASALIDA { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        public string? HORAENTRADA { get; set; }
     }
 }

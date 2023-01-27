@@ -53,7 +53,7 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string? Estado { get; set; }
 
-        public double? Rol { get; set; }
+        public double? Roles { get; set; }
     }
 }
 
