@@ -9,10 +9,10 @@ namespace gedefApi.Models
         public int IDPERFIL { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string USUARIO { get; set; }
+        public string USUARIO { get; set; } = null!;
 
         [Column(TypeName = "nvarchar(50)")]
-        public string CONTRASEÑA { get; set; }
+        public string CONTRASEÑA { get; set; } = null!;
 
         [Column(TypeName = "nvarchar(50)")]
         public string? CATEGORIA { get; set; }

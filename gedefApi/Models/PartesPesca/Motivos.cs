@@ -12,5 +12,8 @@ namespace gedefApi.Models.PartesPesca
         [Column(TypeName = "nvarchar(50)")]
         public string? ESTADO { get; set; }
 
+        [Column(TypeName = "nvarchar(50)")]
+        public string? USOS { get; set; }
+
     }
 }

@@ -1061,7 +1061,6 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\gede
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net6.0\ref\gedefApi.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Core.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Castle.Windsor.dll
-C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Build.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.Build.Framework.dll
@@ -1073,3 +1072,5 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\NETC
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\EmailService.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\EmailService.pdb
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll

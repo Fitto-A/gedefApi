@@ -12,6 +12,7 @@ namespace gedefApi.Models.PlanillaRoles
         public int? IDLEGAJO { get; set; }
         public int? DIASGUARDIA { get; set; }
         public int? DIASTRABAJO { get; set; }
+        public int? DIASTRABAJOESPECIAL { get; set; }
         public int? TOTAL { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace gedefApi.Models
         public int CODBAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string NOMBAR { get; set; }
+        public string? NOMBAR { get; set; }
 
         [Column(TypeName = "nchar(1)")]
         public int? ACTBAR { get; set; }

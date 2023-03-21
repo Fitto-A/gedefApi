@@ -272,3 +272,4 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\NE
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\BouncyCastle.Crypto.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\EmailService.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\EmailService.pdb
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\System.Reflection.MetadataLoadContext.dll
