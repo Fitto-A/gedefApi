@@ -5,6 +5,8 @@ namespace gedefApi.Models
 {
     public class Usuarios
     {
+        //internal object errorMessage;
+
         [Key]
         public int IDPERFIL { get; set; }
 
@@ -16,5 +18,12 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string? CATEGORIA { get; set; }
+
+        [NotMapped]
+        public string? ERRORMESSAGE { get; set; }
+
+        [NotMapped]
+        public float? EXPIRATIONTIME { get; set; }
+
     }
 }
