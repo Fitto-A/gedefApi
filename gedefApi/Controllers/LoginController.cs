@@ -102,7 +102,11 @@ namespace gedefApi.Controllers
                 {
                     //new Claim(ClaimTypes.Sid, user.IDPERFIL),
                     new Claim(ClaimTypes.NameIdentifier, user.USUARIO),
-                    new Claim(ClaimTypes.Role, user.CATEGORIA)
+                    new Claim(ClaimTypes.Role, user.CATEGORIA),
+                    new Claim(ClaimTypes.Name, user.NOMBRE),
+                    new Claim(ClaimTypes.Surname, user.APELLIDO),
+                    new Claim(ClaimTypes.Sid, user.IDPERFIL.ToString())
+
                 };
 
             //crear el token
@@ -128,8 +132,11 @@ namespace gedefApi.Controllers
                 return new Usuarios
                 {
                     USUARIO = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.NameIdentifier)?.Value,
-                    CATEGORIA = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Role)?.Value
-                };
+                    CATEGORIA = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Role)?.Value,
+                    NOMBRE = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Name)?.Value,
+                    APELLIDO = userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Surname)?.Value,
+                    IDPERFIL = Int32.Parse(userClaims.FirstOrDefault(o => o.Type == ClaimTypes.Sid)?.Value) 
+                }; 
             }
             return null;
         }

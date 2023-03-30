@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gedefApi.Controllers
 {
@@ -29,6 +30,48 @@ namespace gedefApi.Controllers
               return NotFound();
           }
             return await _context.TBA_BARCOS.ToListAsync();
+        }
+
+        [HttpGet("byArmador/{idPerfil}")]
+        //[Authorize(Roles = ("ARMADOR"))]
+        public async Task<ActionResult<Barcos>> GetByIdPerfil(int idPerfil)
+        {
+            if (_context.TBA_BARCOS == null)
+            {
+                return NotFound();
+            }
+            var barcos = await _context.TBA_BARCOS.ToListAsync();
+            var item = barcos.FindAll(e => e.ARMADOR1 == idPerfil || e.ARMADOR2 == idPerfil 
+                || e.ARMADOR3 == idPerfil || e.ARMADOR4 == idPerfil);
+            if(item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+
+        [HttpGet("byCapitan/{idPerfil}")]
+        //[Authorize(Roles = ("ARMADOR"))]
+        public async Task<ActionResult<Barcos>> GetByIdPerfilCapi(int idPerfil)
+        {
+            if (_context.TBA_BARCOS == null)
+            {
+                return NotFound();
+            }
+            var barcos = await _context.TBA_BARCOS.ToListAsync();
+            var item = barcos.FindAll(e => e.CAPITAN1 == idPerfil || e.CAPITAN2 == idPerfil
+                || e.CAPITAN3 == idPerfil || e.CAPITAN4 == idPerfil);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
         }
 
         // GET: api/Barcos/5
