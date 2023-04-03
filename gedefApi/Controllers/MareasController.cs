@@ -32,6 +32,25 @@ namespace gedefApi.Controllers
             return await _context.TBA_MAREAS.ToListAsync();
         }
 
+        [HttpGet("activasYConfeccion")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASActivasyConfeccion()
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+            var mareas = await _context.TBA_MAREAS.ToListAsync();
+            var item = mareas.FindAll(e => e.ESTADO == "ACTIVA" || e.ESTADO == "CONFECCION");
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+
         // GET: api/Mareas/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Mareas>> GetMareas(int id)
