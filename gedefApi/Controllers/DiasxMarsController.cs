@@ -50,6 +50,27 @@ namespace gedefApi.Controllers
             return diasxMar;
         }
 
+        [HttpGet("byIdMarea/{idMarea}")]
+        public async Task<ActionResult<DiasxMar>> GetByIdMarea(int idMarea)
+        {
+            if (_context.TBA_DIASXMAR == null)
+            {
+                return NotFound();
+            }
+            var diasXMar = await _context.TBA_DIASXMAR.ToListAsync();
+            var item = diasXMar.FindAll(e => e.IDMAREA == idMarea);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+
+        // GET: api/DiasxMars/5
+
         // PUT: api/DiasxMars/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
