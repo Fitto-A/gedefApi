@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
 using EmailService;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace gedefApi.Controllers
 {
@@ -49,6 +51,25 @@ namespace gedefApi.Controllers
             {
                 return Ok(item);
             }
+        }
+
+        [HttpGet("getLastNumMarea/{id}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetLasNumMarea(int id)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+            var mareas = await _context.TBA_MAREAS.ToListAsync();
+            var mareasFiltered = mareas.FindAll(m => m.CODBAR == id & m.ESTADO != "ELIMINADA");
+            if (mareasFiltered == null) {
+                return Ok(0);
+            } else 
+            {
+                var item = mareasFiltered.Max(i => i.NUMMAREA);
+                return Ok(item);
+            }
+           
         }
 
         // GET: api/Mareas/5

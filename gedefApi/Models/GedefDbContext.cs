@@ -1,5 +1,6 @@
 ﻿using gedefApi.Models.PartesPesca;
 using gedefApi.Models.PlanillaRoles;
+using gedefApi.Models.RRHH;
 using Microsoft.EntityFrameworkCore;
 
 namespace gedefApi.Models
@@ -33,6 +34,10 @@ namespace gedefApi.Models
         public DbSet<Motivos> TBA_MOTIVOS { get; set; }
         public DbSet<PFPCongeladores> TBA_PFPCongeladores { get; set; }
         public DbSet<PFPFresqueros> TBA_PFPFresqueros { get; set; }
+
+        //RRHH
+        //public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
+
     }
 
 }
