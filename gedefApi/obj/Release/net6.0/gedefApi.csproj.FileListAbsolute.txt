@@ -274,3 +274,4 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Em
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\EmailService.pdb
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Release\net6.0\System.Diagnostics.DiagnosticSource.dll

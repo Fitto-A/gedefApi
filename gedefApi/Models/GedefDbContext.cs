@@ -34,9 +34,11 @@ namespace gedefApi.Models
         public DbSet<Motivos> TBA_MOTIVOS { get; set; }
         public DbSet<PFPCongeladores> TBA_PFPCongeladores { get; set; }
         public DbSet<PFPFresqueros> TBA_PFPFresqueros { get; set; }
+        public DbSet<ActaDescarga> TBA_ACTADESCARGA { get; set; }
+        public DbSet<ActaDescargaPP> TBA_ACTADESCARGA_PP { get; set; }
 
         //RRHH
-        //public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
+        public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
 
     }
 

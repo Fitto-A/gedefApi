@@ -24,6 +24,8 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string? TRIPULANTEEXTRA { get; set; }
+        public int? MILLASCANT { get; set; }
+        public int? COMBUSTIBLE { get; set; }
         public int CODBAR { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
