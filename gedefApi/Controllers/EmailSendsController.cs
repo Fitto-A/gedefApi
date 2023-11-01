@@ -89,9 +89,9 @@ namespace gedefApi.Controllers
             _context.TBA_EMAILSEND.Add(emailSend);
             await _context.SaveChangesAsync();
 
-            var destinationDynamic = emailSend.DESTINATION != null ? emailSend.DESTINATION : "sistemas@grupoveraz.com.ar";
-            var titleDynamic = emailSend.TITLE != null ? emailSend.TITLE : "Título";
-            var contentDynamic = emailSend.EMAILCONTENT != null ? emailSend.EMAILCONTENT : " ";
+            var destinationDynamic = emailSend.DESTINATION ?? "sistemas@grupoveraz.com.ar";
+            var titleDynamic = emailSend.TITLE ?? "Título";
+            var contentDynamic = emailSend.EMAILCONTENT ?? " ";
 
             //COMENTADO PARA ENVIAR MAILS SIN ADJUNTOS
             //var files = Request.Form.Files.Any() ? Request.Form.Files : new FormFileCollection();

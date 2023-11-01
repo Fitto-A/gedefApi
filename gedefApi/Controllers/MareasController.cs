@@ -1,24 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using gedefApi.Models;
-using EmailService;
-using Microsoft.Data.SqlClient;
 using System.Data;
-using Castle.Core;
-using Castle.MicroKernel.Registration;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.Win32;
-using System.Collections;
-using System.Drawing.Printing;
-using System.Drawing;
-using System.Net;
-using System.Runtime.ConstrainedExecution;
-using System.Security.Policy;
+
 
 namespace gedefApi.Controllers
 {
