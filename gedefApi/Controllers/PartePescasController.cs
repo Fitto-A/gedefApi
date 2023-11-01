@@ -50,31 +50,49 @@ namespace gedefApi.Controllers
             return partePesca;
         }
 
-        //[HttpGet("{idmar}")]
-        //public async Task<ActionResult<PartePesca>> GetByIdMar(int idmar)
-        //{
-        //    if(_context.TBA_PARTEPESCA == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var partes = await _context.TBA_PARTEPESCA.ToListAsync();
-        //    var item = partes.SelectMany(i => i.IDMAR == idmar);
+        [HttpGet("byIdMarea/{idmar}")]
+        public async Task<ActionResult<PartePesca>> GetPPByIdMar(int idmar)
+        {
+            if (_context.TBA_PARTEPESCA == null)
+            {
+                return NotFound();
+            }
+            var partes = await _context.TBA_PARTEPESCA.ToListAsync();
+            var item = partes.FindAll(i => i.IDMAR == idmar);
 
-        //    if(item == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    else
-        //    {
-        //        return item;
-        //    }
-        //}
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+        [HttpGet("byBar/{codbar}")]
+        public async Task<ActionResult<PartePesca>> GetPPByCodBar(int codbar)
+        {
+            if (_context.TBA_PARTEPESCA == null)
+            {
+                return NotFound();
+            }
+            var partes = await _context.TBA_PARTEPESCA.ToListAsync();
+            var item = partes.FindAll(i => i.CODBAR == codbar);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
 
 
-
-    // PUT: api/PartePescas/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPut("{id}")]
+        // PUT: api/PartePescas/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutPartePesca(int id, PartePesca partePesca)
         {
             if (id != partePesca.IDPP)

@@ -56,5 +56,11 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nvarchar(50)")]
         public string? HORAENTRADA { get; set; }
+
+        [Column(TypeName = "nchar(1)")]
+        public string? ACTADESCARGA { get; set; }
+
+        [Column(TypeName = "nvarchar(4)")]
+        public string? VARIANTE { get; set; }
     }
 }

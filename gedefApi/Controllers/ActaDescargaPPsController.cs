@@ -148,6 +148,26 @@ namespace gedefApi.Controllers
             return NoContent();
         }
 
+        [HttpDelete("deleteByOtherParam/{idad}")]
+        public async Task<IActionResult> DeleteActaDescargaPPByOtherParam(int idad)
+        {
+            if (_context.TBA_ACTADESCARGA_PP == null)
+            {
+                return NotFound();
+            }
+            var actaDescargaPP = await _context.TBA_ACTADESCARGA_PP.ToListAsync();
+            var item = actaDescargaPP.FindAll(a => a.IDAD == idad);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _context.TBA_ACTADESCARGA_PP.RemoveRange(item);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
         private bool ActaDescargaPPExists(int id)
         {
             return (_context.TBA_ACTADESCARGA_PP?.Any(e => e.ID == id)).GetValueOrDefault();

@@ -21,7 +21,7 @@ namespace gedefApi.Models.PartesPesca
         [Column(TypeName = "nvarchar(50)")]
         public string? PRODUCTOS { get; set; }
         public int? ENVASES { get; set; }
-        public int? PROMEDIO { get; set; }
+        public double? PROMEDIO { get; set; }
         public double? KGNETOS { get; set; }
 
     }

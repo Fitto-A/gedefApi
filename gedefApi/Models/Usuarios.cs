@@ -25,6 +25,8 @@ namespace gedefApi.Models
         [Column(TypeName = "nvarchar(50)")]
         public string? APELLIDO { get; set; }
 
+        public int? DNI { get; set; }   
+
         [NotMapped]
         public string? ERRORMESSAGE { get; set; }
 

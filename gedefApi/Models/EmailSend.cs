@@ -8,8 +8,9 @@ namespace gedefApi.Models
     {
         [Key]
         public int ID { get; set; }
+        public int IDMAR { get; set; }
 
-        [Column(TypeName = "nvarchar(2000)")]
+        [Column(TypeName = "nvarchar(256)")]
         public string? DESTINATION { get; set; }
 
         [Column(TypeName = "nvarchar(256)")]

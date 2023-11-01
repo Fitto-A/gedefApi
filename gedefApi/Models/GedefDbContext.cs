@@ -17,6 +17,7 @@ namespace gedefApi.Models
         public DbSet<Numeradores> TBA_NUMERADORES { get; set; } 
         public DbSet<Puertos> TBA_PUERTOS { get; set; } 
         public DbSet<EmailSend> TBA_EMAILSEND { get; set; } 
+        public DbSet<Empresas> TBA_EMPRESAS { get; set; }
 
         //PLANILLAROLES
         public DbSet<RolxBar> TBA_ROLXBAR { get; set; } 
@@ -39,6 +40,7 @@ namespace gedefApi.Models
 
         //RRHH
         public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
+        public DbSet<Sueldos> TBA_SUELDOS { get; set; }
 
     }
 

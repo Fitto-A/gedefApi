@@ -89,7 +89,7 @@ namespace gedefApi.Controllers
             _context.TBA_EMAILSEND.Add(emailSend);
             await _context.SaveChangesAsync();
 
-            var destinationDynamic = emailSend.DESTINATION != null ? emailSend.DESTINATION : "afittipaldi@grupoveraz.com.ar";
+            var destinationDynamic = emailSend.DESTINATION != null ? emailSend.DESTINATION : "sistemas@grupoveraz.com.ar";
             var titleDynamic = emailSend.TITLE != null ? emailSend.TITLE : "Título";
             var contentDynamic = emailSend.EMAILCONTENT != null ? emailSend.EMAILCONTENT : " ";
 
@@ -97,7 +97,7 @@ namespace gedefApi.Controllers
             //var files = Request.Form.Files.Any() ? Request.Form.Files : new FormFileCollection();
             //var message = new Message(new string[] { destinationDynamic! }, titleDynamic!, contentDynamic!, files);
 
-            var message = new Message(new string[] { destinationDynamic! }, titleDynamic!, contentDynamic!);
+            var message = new Message(new string[] { destinationDynamic! }, titleDynamic!, contentDynamic!) ;
             await _emailSender.SendEmailAsync(message);
 
             return CreatedAtAction("GetEmailSend", new { id = emailSend.ID }, emailSend);

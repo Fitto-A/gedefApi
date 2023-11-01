@@ -9,6 +9,16 @@ using gedefApi.Models;
 using EmailService;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using Castle.Core;
+using Castle.MicroKernel.Registration;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Win32;
+using System.Collections;
+using System.Drawing.Printing;
+using System.Drawing;
+using System.Net;
+using System.Runtime.ConstrainedExecution;
+using System.Security.Policy;
 
 namespace gedefApi.Controllers
 {
@@ -34,6 +44,27 @@ namespace gedefApi.Controllers
             return await _context.TBA_MAREAS.ToListAsync();
         }
 
+
+
+        [HttpGet("fifty/{mareasCount}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASFifty(int mareasCount)
+        {
+            int pageSize = 50;
+
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+            var mareas = await _context.TBA_MAREAS
+                .Where(e => e.ESTADO != "ELIMINADA")
+                .OrderByDescending(m => m.IDMAR)
+                .Skip((mareasCount - 1) * pageSize)
+                .Take(50)
+                .ToListAsync();
+            //var mareasNotDeleted = mareas.FindAll(e => e.ESTADO != "ELIMINADA");
+            return Ok(mareas);
+        }
+       
         [HttpGet("activasYConfeccion")]
         public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASActivasyConfeccion()
         {
@@ -52,16 +83,112 @@ namespace gedefApi.Controllers
                 return Ok(item);
             }
         }
-
-        [HttpGet("getLastNumMarea/{id}")]
-        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetLasNumMarea(int id)
+        [HttpGet("activasByShip/{codbar}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASActivasByShip(int codbar)
         {
             if (_context.TBA_MAREAS == null)
             {
                 return NotFound();
             }
             var mareas = await _context.TBA_MAREAS.ToListAsync();
-            var mareasFiltered = mareas.FindAll(m => m.CODBAR == id & m.ESTADO != "ELIMINADA");
+            var item = mareas.FindAll(e => e.ESTADO == "ACTIVA" & e.CODBAR == codbar);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+        [HttpGet("getByShipAndYear/{year}/{codbar}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetByShipAndYear(string year, int codbar)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+
+            var mareas = await _context.TBA_MAREAS.OrderByDescending(m => m.IDMAR).ToListAsync();
+            var items = mareas.FindAll(e => e.ESTADO != "ELIMINADA" & e.ANO == year &&  e.CODBAR == codbar);
+
+            if (items == null || items.Count == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(items);
+            }
+        }
+        [HttpGet("getByYear/{year}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetByYear(string year)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+
+            var mareas = await _context.TBA_MAREAS.OrderByDescending(m => m.IDMAR).ToListAsync();
+            var items = mareas.FindAll(e => e.ESTADO != "ELIMINADA" & e.ANO == year);
+
+            if (items == null || items.Count == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(items);
+            }
+        }
+        [HttpGet("getByCodbar/{codbar}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetByCodbar(int codbar)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+
+            var mareas = await _context.TBA_MAREAS.OrderByDescending(m => m.IDMAR).ToListAsync();
+            var items = mareas.FindAll(e => e.ESTADO != "ELIMINADA" & e.CODBAR == codbar);
+
+            if (items == null || items.Count == 0)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(items);
+            }
+        }
+        [HttpGet("getNewMarea/{codbar}/{year}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetNewMarea(int codbar, string year)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+            var mareas = await _context.TBA_MAREAS.ToListAsync();
+            var item = mareas.FindAll(e => e.ESTADO == "CONFECCION" & e.CODBAR == codbar & e.ANO == year);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(item);
+            }
+        }
+
+        [HttpGet("getLastNumMarea/{codbar}/{year}")]
+        public async Task<ActionResult<IEnumerable<Mareas>>> GetTBA_MAREASGetLasNumMarea(int codbar, string year)
+        {
+            if (_context.TBA_MAREAS == null)
+            {
+                return NotFound();
+            }
+            var mareas = await _context.TBA_MAREAS.ToListAsync();
+            var mareasFiltered = mareas.FindAll(m => m.CODBAR == codbar & m.ANO == year & m.ESTADO != "ELIMINADA" );
             if (mareasFiltered == null) {
                 return Ok(0);
             } else 
@@ -69,7 +196,6 @@ namespace gedefApi.Controllers
                 var item = mareasFiltered.Max(i => i.NUMMAREA);
                 return Ok(item);
             }
-           
         }
 
         // GET: api/Mareas/5

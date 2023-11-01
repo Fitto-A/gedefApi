@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace gedefApi.Models
 {
     public class Puertos
@@ -16,6 +17,10 @@ namespace gedefApi.Models
 
         [Column(TypeName = "nchar(4)")]
         public string? NOMABREV { get; set; }
+
+        //[Column(TypeName = "SqlInt32")]
+
+        //public SqlGeometry? COORDERNADAS { get; set; }
 
     }
 }

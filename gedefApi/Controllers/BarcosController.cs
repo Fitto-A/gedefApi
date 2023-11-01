@@ -41,8 +41,10 @@ namespace gedefApi.Controllers
                 return NotFound();
             }
             var barcos = await _context.TBA_BARCOS.ToListAsync();
-            var item = barcos.FindAll(e => e.ARMADOR1 == idPerfil || e.ARMADOR2 == idPerfil 
-                || e.ARMADOR3 == idPerfil || e.ARMADOR4 == idPerfil);
+            var barcosActivos = barcos.FindAll(e => e.ACTBAR == 1);
+            var item = barcosActivos.FindAll(e => e.ARMADOR1 == idPerfil || e.ARMADOR2 == idPerfil 
+                || e.ARMADOR3 == idPerfil || e.ARMADOR4 == idPerfil || e.ARMADOR5 == idPerfil || e.ARMADOR6 == idPerfil
+                || e.ARMADOR7 == idPerfil || e.ARMADOR8 == idPerfil || e.ARMADOR9 == idPerfil || e.ARMADOR10 == idPerfil);
             if(item == null)
             {
                 return NotFound();
@@ -62,7 +64,8 @@ namespace gedefApi.Controllers
                 return NotFound();
             }
             var barcos = await _context.TBA_BARCOS.ToListAsync();
-            var item = barcos.FindAll(e => e.CAPITAN1 == idPerfil || e.CAPITAN2 == idPerfil
+            var barcosActivos = barcos.FindAll(e => e.ACTBAR == 1);
+            var item = barcosActivos.FindAll(e => e.CAPITAN1 == idPerfil || e.CAPITAN2 == idPerfil
                 || e.CAPITAN3 == idPerfil || e.CAPITAN4 == idPerfil);
             if (item == null)
             {
@@ -71,6 +74,26 @@ namespace gedefApi.Controllers
             else
             {
                 return Ok(item);
+            }
+        }
+
+        [HttpGet("byRrhh/{idPerfil}")]
+        //[Authorize(Roles = ("ARMADOR"))]
+        public async Task<ActionResult<Barcos>> GetByIdPerfilRrhh(int idPerfil)
+        {
+            if (_context.TBA_BARCOS == null)
+            {
+                return NotFound();
+            }
+            var barcos = await _context.TBA_BARCOS.ToListAsync();
+            var barcosActivos = barcos.FindAll(e => e.ACTBAR == 1);
+            if (barcosActivos == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(barcosActivos);
             }
         }
 

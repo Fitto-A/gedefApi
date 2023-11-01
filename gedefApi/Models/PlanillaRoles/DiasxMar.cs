@@ -14,5 +14,6 @@ namespace gedefApi.Models.PlanillaRoles
         public int? DIASTRABAJO { get; set; }
         public int? DIASTRABAJOESPECIAL { get; set; }
         public int? TOTAL { get; set; }
+        public double? VIATICOS { get; set; }
     }
 }

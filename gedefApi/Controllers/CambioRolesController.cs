@@ -50,6 +50,22 @@ namespace gedefApi.Controllers
             return cambioRoles;
         }
 
+        [HttpGet("byIdMarea/{idMar}")]
+        public async Task<ActionResult<CambioRoles>> GetByIdMarea(int idMar)
+        {
+            if (_context.TBA_CAMBIOROLES == null)
+            {
+                return NotFound();
+            }
+            var cambioRoles = await _context.TBA_CAMBIOROLES.ToListAsync();
+            var item = cambioRoles.FindAll(e => e.IDMAR == idMar);
+            if (cambioRoles == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
+        }
+
         // PUT: api/CambioRoles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

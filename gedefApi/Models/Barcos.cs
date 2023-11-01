@@ -42,5 +42,15 @@ namespace gedefApi.Models
         public int? CAPITAN2 { get; set; }
         public int? CAPITAN3 { get; set; }
         public int? CAPITAN4 { get; set; }
+
+        [Column(TypeName = "nchar(4)")]
+        public string? MATRICULA { get; set; }
+
+        public int? ARMADOR5 { get; set; }
+        public int? ARMADOR6 { get; set; }
+        public int? ARMADOR7 { get; set; }
+        public int? ARMADOR8 { get; set; }
+        public int? ARMADOR9 { get; set; }
+        public int? ARMADOR10 { get; set; }
     }
 }
