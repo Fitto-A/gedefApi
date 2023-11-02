@@ -1,6 +1,7 @@
 using EmailService;
 using gedefApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -55,26 +56,30 @@ var app = builder.Build();
 //.AllowAnyMethod()
 //.AllowAnyHeader());
 
-//if (app.Environment.IsDevelopment()){
-//    app.UseCors(options =>
-//        options.WithOrigins("http://localhost:7672", "http://localhost:7673")
-//    .AllowAnyMethod()
-//    .AllowAnyHeader());
-//}else if (app.Environment.IsProduction())
-//{ 
-//    app.UseCors(options =>
-//        options.WithOrigins("http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
-//    .AllowAnyMethod()
-//    .AllowAnyHeader());
-//}
-
-app.UseCors(options =>
+if (app.Environment.IsDevelopment())
 {
-    options
-    .AllowAnyOrigin()
+    app.UseCors(options =>
+        options.WithOrigins("http://localhost:7672")
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+}
+else if (app.Environment.IsProduction())
+{
+    app.UseCors(options =>
+        options.WithOrigins("http://200.32.51.124:7672/API/", "http://gedef.grupoveraz.com.ar:7672")
+    .AllowAnyMethod()
     .AllowAnyHeader()
-    .AllowAnyMethod();
-});
+    .AllowCredentials());
+
+   }
+
+//app.UseCors(options =>
+//{
+//    options
+//    .AllowAnyOrigin()
+//    .AllowAnyHeader()
+//    .AllowAnyMethod();
+//});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction()) 
