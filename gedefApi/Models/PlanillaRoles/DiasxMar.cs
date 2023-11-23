@@ -15,5 +15,9 @@ namespace gedefApi.Models.PlanillaRoles
         public int? DIASTRABAJOESPECIAL { get; set; }
         public int? TOTAL { get; set; }
         public double? VIATICOS { get; set; }
+        public double? FRANCOS { get; set; }
+
+        [Column (TypeName = "nvarchar(50)")]
+        public string? PERIODO { get; set; }
     }
 }

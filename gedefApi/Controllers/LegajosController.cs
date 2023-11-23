@@ -49,6 +49,24 @@ namespace gedefApi.Controllers
             return legajos;
         }
 
+        [HttpGet("byLegajo/{idleg}")]
+        public async Task<ActionResult<Legajos>> GetLegajosByidLeg(int idleg)
+        {
+            if (_context.TBA_LEGAJOS == null)
+            {
+                return NotFound();
+            }
+            var legajos = await _context.TBA_LEGAJOS
+                    .Where(e => e.Legajo == idleg)
+                    .ToListAsync();
+
+            if (legajos == null)
+            {
+                return NotFound();
+            }
+            return Ok(legajos);
+        }
+
         // PUT: api/Legajos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tpisCf2Pa7mPg5wK+J8TMKsrWbfEY1XJJyGH+Pz1WRO99vGxKJaZyyjH+WZh5cHnxr5WBQ5JfQ9scWoC2THqGw==",
+  "dgSpecHash": "JijRnU6dOVBdAF7jK5pOUh91p2QeAo4XKdYGgJhGLfQepU5Vjfay4mdr+SKf19aASbSlpHCBxBzx4vr5WSTGBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\agustin\\Desktop\\App\\gedef-front\\gedefApi\\gedefApi\\gedefApi.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\agustin\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.13\\microsoft.aspnetcore.authentication.jwtbearer.7.0.13.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\agustin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",
@@ -110,7 +111,7 @@
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.net.stringtools\\17.3.2\\microsoft.net.stringtools.17.3.2.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\agustin\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\agustin\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\7.0.11\\microsoft.visualstudio.web.codegeneration.7.0.11.nupkg.sha512",
     "C:\\Users\\agustin\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\7.0.11\\microsoft.visualstudio.web.codegeneration.core.7.0.11.nupkg.sha512",

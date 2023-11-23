@@ -2,6 +2,7 @@
 using gedefApi.Models.PlanillaRoles;
 using gedefApi.Models.RRHH;
 using Microsoft.EntityFrameworkCore;
+using System.Xml;
 
 namespace gedefApi.Models
 {
@@ -41,7 +42,19 @@ namespace gedefApi.Models
         //RRHH
         public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
         public DbSet<Sueldos> TBA_SUELDOS { get; set; }
+        public DbSet<FrancosAjuste> TBA_FRANCOS_AJUSTE { get; set; }
+        public DbSet<FrancoTotal> VST_FRANCO_TOTAL { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        {
+            modelBuilder.Entity<Sueldos>()
+                .HasKey(s => new { s.IDROL, s.IDEMP });
+
+            modelBuilder.Entity<FrancoTotal>()
+                .HasNoKey()
+                .ToTable("VST_FRANCO_TOTAL");
+        }
     }
 
 }

@@ -11,6 +11,7 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\Pu
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Humanizer.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\MailKit.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Release\net7.0\PubTmp\Out\Microsoft.Build.dll

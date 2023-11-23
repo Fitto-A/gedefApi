@@ -260,3 +260,4 @@ C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net7.0\refi
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net7.0\gedefApi.pdb
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net7.0\gedefApi.genruntimeconfig.cache
 C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\obj\Debug\net7.0\ref\gedefApi.dll
+C:\Users\agustin\Desktop\App\gedef-front\gedefApi\gedefApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll

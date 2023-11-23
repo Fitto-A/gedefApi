@@ -32,14 +32,14 @@ namespace gedefApi.Controllers
         }
 
         // GET: api/Sueldos/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Sueldos>> GetSueldos(int id)
+        [HttpGet("{idrol}/{idemp}")]
+        public async Task<ActionResult<Sueldos>> GetSueldos(int idrol, string idemp)
         {
           if (_context.TBA_SUELDOS == null)
           {
               return NotFound();
           }
-            var sueldos = await _context.TBA_SUELDOS.FindAsync(id);
+            var sueldos = await _context.TBA_SUELDOS.FindAsync(idrol, idemp);
 
             if (sueldos == null)
             {
@@ -51,10 +51,10 @@ namespace gedefApi.Controllers
 
         // PUT: api/Sueldos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSueldos(int id, Sueldos sueldos)
+        [HttpPut("{idrol}/{idemp}")]
+        public async Task<IActionResult> PutSueldos(int idrol, string idemp, Sueldos sueldos)
         {
-            if (id != sueldos.IDROL)
+            if (idrol != sueldos.IDROL && idemp != sueldos.IDEMP)
             {
                 return BadRequest();
             }
@@ -67,7 +67,7 @@ namespace gedefApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SueldosExists(id))
+                if (!SueldosExists(idrol, idemp))
                 {
                     return NotFound();
                 }
@@ -90,9 +90,23 @@ namespace gedefApi.Controllers
               return Problem("Entity set 'GedefDbContext.TBA_SUELDOS'  is null.");
           }
             _context.TBA_SUELDOS.Add(sueldos);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (SueldosExists(sueldos.IDROL, sueldos.IDEMP))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-            return CreatedAtAction("GetSueldos", new { id = sueldos.IDROL }, sueldos);
+            return CreatedAtAction("GetSueldos", new { idrol = sueldos.IDROL, idemp = sueldos.IDEMP }, sueldos);
         }
 
         // DELETE: api/Sueldos/5
@@ -115,7 +129,7 @@ namespace gedefApi.Controllers
             return NoContent();
         }
 
-        private bool SueldosExists(int id)
+        private bool SueldosExists(int id, string idemp)
         {
             return (_context.TBA_SUELDOS?.Any(e => e.IDROL == id)).GetValueOrDefault();
         }
