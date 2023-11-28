@@ -3,7 +3,7 @@
 namespace gedefApi.Models.RRHH
 {
     [Keyless]
-    public class FrancoTotal
+    public class FrancosTotal
     {
         public int? IDLEGAJO { get; set; }
         public double? FRANCOS { get; set;}

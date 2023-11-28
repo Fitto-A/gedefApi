@@ -43,7 +43,8 @@ namespace gedefApi.Models
         public DbSet<CambioRoles> TBA_CAMBIOROLES { get; set; }
         public DbSet<Sueldos> TBA_SUELDOS { get; set; }
         public DbSet<FrancosAjuste> TBA_FRANCOS_AJUSTE { get; set; }
-        public DbSet<FrancoTotal> VST_FRANCO_TOTAL { get; set; }
+        public DbSet<FrancosTotal> VST_FRANCOS_TOTAL { get; set; }
+        public DbSet<FrancosSoft> VST_FRANCOS_SOFT { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 
@@ -51,9 +52,13 @@ namespace gedefApi.Models
             modelBuilder.Entity<Sueldos>()
                 .HasKey(s => new { s.IDROL, s.IDEMP });
 
-            modelBuilder.Entity<FrancoTotal>()
+            modelBuilder.Entity<FrancosTotal>()
                 .HasNoKey()
-                .ToTable("VST_FRANCO_TOTAL");
+                .ToTable("VST_FRANCOS_TOTAL");
+
+            modelBuilder.Entity<FrancosSoft>()
+                .HasNoKey()
+                .ToTable("VST_FRANCOS_SOFT");
         }
     }
 

@@ -13,36 +13,36 @@ namespace gedefApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FrancoTotalController : ControllerBase
+    public class FrancosTotalController : ControllerBase
     {
         private readonly GedefDbContext _context;
-        public FrancoTotalController(GedefDbContext context)
+        public FrancosTotalController(GedefDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/FrancoTotal
+        // GET: api/FrancosTotal
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<FrancoTotal>>> GetVST_FRANCO_TOTAL()
+        public async Task<ActionResult<IEnumerable<FrancosTotal>>> GetVST_FRANCOS_TOTAL()
 
         {
-            if (_context.VST_FRANCO_TOTAL == null)
+            if (_context.VST_FRANCOS_TOTAL == null)
             {
                 return NotFound();
             }
-            return await _context.VST_FRANCO_TOTAL.ToListAsync();
+            return await _context.VST_FRANCOS_TOTAL.ToListAsync();
         }
 
-        // GET: api/FrancoTotal/5
+        // GET: api/FrancosTotal/5
         [HttpGet("{idlegajo}")]
-        public async Task<ActionResult<FrancoTotal>> GetFrancosByIdLegajo(int idlegajo)
+        public async Task<ActionResult<FrancosTotal>> GetFrancosByIdLegajo(int idlegajo)
 
         {
-            if (_context.VST_FRANCO_TOTAL == null)
+            if (_context.VST_FRANCOS_TOTAL == null)
             {
                 return NotFound();
             }
-            var francos = await _context.VST_FRANCO_TOTAL.ToListAsync();
+            var francos = await _context.VST_FRANCOS_TOTAL.ToListAsync();
             var francosByIdLegajo = francos.FindAll(e => e.IDLEGAJO == idlegajo);
 
             if (francosByIdLegajo == null)

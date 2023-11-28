@@ -24,11 +24,32 @@ namespace gedefApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Legajos>>> GetTBA_LEGAJOS()
         {
-          if (_context.TBA_LEGAJOS == null)
-          {
-              return NotFound();
-          }
-            return await _context.TBA_LEGAJOS.ToListAsync();
+            var result = await _context.TBA_LEGAJOS
+                .Where(e => e.Empresa != "PESPASA")
+                .ToListAsync();
+
+            if (result.Count == 0)
+            {
+                return NotFound();
+            }
+            return result;
+        }
+
+        // GET: api/paginate/1/50
+        [HttpGet("paginate/{pageNumber}/{pageSize}")]
+        public async Task<ActionResult<IEnumerable<Legajos>>> GetLegajosPaginate(int pageNumber, int pageSize)
+        {
+            var result = await _context.TBA_LEGAJOS
+                .Where(e => e.Empresa != "PESPASA")
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            if (result.Count == 0)
+            {
+                return NotFound();
+            }
+            return result;
         }
 
         // GET: api/Legajos/5
